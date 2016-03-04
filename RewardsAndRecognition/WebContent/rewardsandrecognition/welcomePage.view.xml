@@ -1,4 +1,15 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
-			controllerName="rewardsandrecognition.welcomePage" xmlns:html="http://www.w3.org/1999/xhtml">
-
+			controllerName="rewardsandrecognition.welcomePage" xmlns:html="http://www.w3.org/1999/xhtml"
+			xmlns:layout="sap.ui.layout">
+			<html:center>
+			<layout:VerticalLayout>	
+			<Image	
+					src="images/welcome/handshake.jpg">
+			</Image>
+			<Button
+					text="next"
+					press="gofwd">
+			</Button>
+			</layout:VerticalLayout>
+			</html:center>
 </core:View>

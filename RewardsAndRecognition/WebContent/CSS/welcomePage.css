@@ -1,0 +1,49 @@
+/* Designing WelcomePage background */
+
+#shellContainer-hdr{
+	background-color:black;
+}
+
+#shellContainer-wsBar{
+	background-color:black;
+}
+
+#shellContainer-hdr > h1{
+	font-size: 4vw !important;
+	color: white !important;
+}
+
+#shellContainer-canvas{
+	background-color: #FDF3E7 !important;
+}
+
+/* Designing WelcomePage Image */
+center{
+	width:inherit;
+}
+
+center  div{
+	width:inherit;
+}
+
+center > div > div > img{
+	width: inherit;
+	height:65vh;
+	margin-top: 1rem;
+    border: 3px solid !important; 
+}
+
+center > div div:nth-child(1){
+	height:69vh;	
+}
+
+center > div div:nth-child(2){
+	margin-top:2rem;
+	height:6vh;
+}
+
+center > div div:nth-child(2) > button{
+	width: 20%;
+    height: 5vh;
+    border-radius: 2rem !important;
+}

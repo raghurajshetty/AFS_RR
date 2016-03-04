@@ -34,5 +34,12 @@ sap.ui.controller("rewardsandrecognition.welcomePage", {
 //	onExit: function() {
 //
 //	}
+	
+	gofwd: function() {
+		var oShell = sap.ui.getCore().byId("shellContainer");
+		oShell.removeAllContent();
+		var dashboardView = sap.ui.getCore().byId("iddashboardPage");
+		oShell.addContent(dashboardView);
+	}
 
 });

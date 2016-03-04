@@ -1,0 +1,10 @@
+#iddashboardPage > div{
+	width:inherit !important;
+}
+
+#iddashboardPage > div > div:nth-child(2){
+	margin-left: 40%;
+}
+canvas{
+	background-color:#FDF3D5 !important
+}

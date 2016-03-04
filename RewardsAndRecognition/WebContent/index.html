@@ -3,19 +3,32 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
-		
+		<link rel="stylesheet" type="text/css" href="CSS/welcomePage.css">
+		<link rel="stylesheet" type="text/css" href="CSS/dashboardPage.css">
+		<script src="extlib/three.js"></script>
 
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
-				data-sap-ui-libs="sap.ui.commons"
+				data-sap-ui-libs="sap.ui.commons,sap.ui.ux3"
 				data-sap-ui-theme="sap_bluecrystal">
 		</script>
 		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
 
 		<script>
 				sap.ui.localResources("rewardsandrecognition");
-				var view = sap.ui.view({id:"idwelcomePage1", viewName:"rewardsandrecognition.welcomePage", type:sap.ui.core.mvc.ViewType.XML});
-				view.placeAt("content");
+				var oShell = new sap.ui.ux3.Shell("shellContainer",{
+								appTitle	  :"AFF Team Portal",
+								showTools	  :false,
+								showSearchTool:false,
+								showFeederTool:false,
+								showPane	  :false,
+								paneWidth     :0,
+								
+				});
+				var welcomeView = sap.ui.view({id:"idwelcomePage", viewName:"rewardsandrecognition.welcomePage", type:sap.ui.core.mvc.ViewType.XML});
+				var dashboardView = sap.ui.view({id:"iddashboardPage", viewName:"rewardsandrecognition.dashboardPage", type:sap.ui.core.mvc.ViewType.XML});
+				oShell.addContent(dashboardView);
+				oShell.placeAt("content");
 		</script>
 
 	</head>
