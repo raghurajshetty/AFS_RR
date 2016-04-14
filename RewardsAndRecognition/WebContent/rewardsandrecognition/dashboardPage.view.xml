@@ -23,13 +23,11 @@
 						press="">
 					</Button>
 				</layout:VerticalLayout>
-				 <html:canvas
-						id="canvasSheet"
-						width="640px"
-						height="480px">
-				</html:canvas>
-				<!-- <html:div
+<!-- 	 			 <html:canvas
 						id="canvasSheet">
-				</html:div> -->
+				</html:canvas>  -->
+				<html:div
+					id="dropBox">
+				</html:div>
 			</layout:HorizontalLayout>
 </core:View>
