@@ -1,22 +1,39 @@
-#iddashboardPage > div{
+#iddashboardPage > div:first-child{
 	width:inherit !important;
+	height: 55vh;
 }
 
-#iddashboardPage > div > div:nth-child(2){
+#iddashboardPage > div:first-child > div:nth-child(2){
 	width: 50%;
-    height: 60vh;
-	margin-left: 40%;
+    height: 50vh;
+	position: fixed;
+    right: 0;
 }
 canvas{
 	background-color:#FDF3D5 !important;
 
 }
 
-#iddashboardPage > div > div:nth-child(2) div{
-	width: 100%;
-    height: 50vh;
-    background-color: #F0F0F0;
+#iddashboardPage > div:first-child > div:nth-child(2) div{
+	width: 30%;
+    height: 45vh;
+    background-color: #D2691E;
     border-radius: 11rem;
-    margin-top: 4rem;
     box-shadow: 10px 10px 16px #666666;
+    margin-top: 3%;
+    position: fixed;
+    right: 3%;
+}
+
+#iddashboardPage > div:first-child > div:nth-child(3){
+	position: fixed;
+    right: 7%;
+    margin-top: 14%;
+}
+
+#iddashboardPage > div:first-child > div:nth-child(3) span{
+	direction: inherit;
+    font-size: 3vw;
+    color: white;
+    box-shadow: 27px 21px 25px black;
 }
