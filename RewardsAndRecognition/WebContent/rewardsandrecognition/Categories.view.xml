@@ -1,0 +1,63 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+			controllerName="rewardsandrecognition.Categories" xmlns:html="http://www.w3.org/1999/xhtml"
+			xmlns:layout="sap.ui.layout">	
+  
+												
+									
+<!-- <html:div class="pic"> -->
+<!--<html:div class="text"> -->
+<!--Product Passion  -->
+<!--</html:div> --> 
+<!--</html:div> -->
+ <layout:HorizontalLayout>
+ <Image src = "images/Categories/award_categories_02.jpg" 
+            width="100%" alt="" class = "img">
+               </Image>    
+               </layout:HorizontalLayout>
+              <layout:HorizontalLayout>
+<layout:VerticalLayout>	
+ <Image src = "images/Categories/Passion2.jpg" 
+             width="100%"
+            class = "img">
+              </Image> 
+              
+            <Image src = "images/Categories/Innovation.jpg" 
+             width="100%"  
+         class = "img"
+         
+         >
+              </Image> 
+              
+              
+			 </layout:VerticalLayout> 
+</layout:HorizontalLayout>
+			
+			
+			 <layout:VerticalLayout>
+			
+			 <Image src = "images/Categories/customer_focus.jpg" 
+              width="65%"
+             
+            class = "img1">
+              </Image> 
+			 
+			 <Image src = "images/Categories/Q3.jpg" 
+             width="65%"
+            
+            class = "img1">
+              </Image> 
+               </layout:VerticalLayout>
+               <layout:VerticalLayout>
+               
+                <Image src = "images/Categories/ot1.jpg" 
+              width="65%"
+             
+            class = "img1">
+              </Image> 
+               
+               
+			 
+			 		
+			 </layout:VerticalLayout>		
+		
+</core:View>

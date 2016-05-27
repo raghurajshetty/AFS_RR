@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+            
+
+
+
+
+
+
+
+    
+        
+    Image{
+   margin: 20px 12px;
+    
+    }   
+    
+    .img{
+      margin: 20px 12px;
+    }
+    
+   .img1{
+      margin: 20px 90px;
+    }
+                  
+body{
+	background: firebrick !important;
+}
