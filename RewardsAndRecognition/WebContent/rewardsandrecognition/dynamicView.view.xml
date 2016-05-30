@@ -1,0 +1,15 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+			controllerName="rewardsandrecognition.dynamicView" xmlns:html="http://www.w3.org/1999/xhtml"
+			xmlns:m="sap.m">
+	
+	<m:HBox id="HLay" items="{/d/results}">
+		<m:items> 
+		<m:Image
+			src="{Img}"
+			alt="Image">
+		</m:Image>
+		
+		</m:items>		
+	</m:HBox> 
+	
+</core:View>
