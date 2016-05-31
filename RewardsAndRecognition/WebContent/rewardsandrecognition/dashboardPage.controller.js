@@ -65,19 +65,21 @@ sap.ui.controller("rewardsandrecognition.dashboardPage", {
 
         // Calling the render function
         render();*/
-		var oCanvas = document.getElementById("iddashboardPage--canvasSheet");
-		var ctx = oCanvas.getContext("2d");
-		ctx.beginPath();
-		ctx.moveTo(320,20);
-		ctx.quadraticCurveTo(-50, 60, 320, 100);
-		ctx.strokeStyle= 'black';
-		ctx.stroke();
-		
-		ctx.beginPath();
-		ctx.moveTo(320,20);
-		ctx.quadraticCurveTo(690, 60, 320, 100);
-		ctx.strokeStyle = 'black';
-		ctx.stroke();
+		/*This piece of code can be used if we need to do anything with respect SVG
+		 * var oCanvas = document.getElementById("iddashboardPage--canvasSheet"); 
+ 		var ctx = oCanvas.getContext("2d"); 
+ 		ctx.beginPath(); 
+ 		ctx.moveTo(320,20); 
+ 		ctx.quadraticCurveTo(-50, 60, 320, 100); 
+ 		ctx.strokeStyle= 'black'; 
+ 		ctx.stroke(); 
+ 		 
+ 		ctx.beginPath(); 
+ 		ctx.moveTo(320,20); 
+ 		ctx.quadraticCurveTo(690, 60, 320, 100); 
+ 		ctx.strokeStyle = 'black'; 
+ 		ctx.stroke(); */
+
 	},
 
 /**

@@ -1,6 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
 			controllerName="rewardsandrecognition.dashboardPage" xmlns:html="http://www.w3.org/1999/xhtml"
-			xmlns:layout="sap.ui.layout">
+			xmlns:layout="sap.ui.layout" xmlns:m="sap.m">
 			<layout:HorizontalLayout>
 				<layout:VerticalLayout>
 					<Button
@@ -23,13 +23,28 @@
 						press="">
 					</Button>
 				</layout:VerticalLayout>
-				 <html:canvas
-						id="canvasSheet"
-						width="640px"
-						height="480px">
-				</html:canvas>
-				<!-- <html:div
+<!-- 	 			 <html:canvas
 						id="canvasSheet">
-				</html:div> -->
+				</html:canvas>  -->
+				<html:div
+					id="dropBox">
+				</html:div>
+				<TextView
+						text="My Nominations">
+				</TextView>
 			</layout:HorizontalLayout>
+			<m:Carousel
+				loop="true">
+				<m:pages>
+					<m:Text
+						text="First Nominee">
+					</m:Text>
+					<m:Text
+						text="Second Nominee">
+					</m:Text>
+					<m:Text
+						text="Third Nominee">
+					</m:Text>
+				</m:pages>
+			</m:Carousel>
 </core:View>
