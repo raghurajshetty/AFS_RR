@@ -38,16 +38,17 @@ sap.ui.controller("rewardsandrecognition.dynamicView", {
 	onAfterRendering: function() {
 		var data;
 		jQuery.ajax({
-			url:"http://localhost:8080/servicesforRR/catlist.svc/Categorys",
+			url:"https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/categoriesSet",
 			dataType:"json",
+			crossDomain:true,
 			success:function(oData){
 				console.log(oData);
 				var oModel = new sap.ui.model.json.JSONModel();
 				oModel.setData(oData);
-				for(var i=0;i<oData.d.results.length;i++){
+				/*for(var i=0;i<oData.d.results.length;i++){
 					data = oData.d.results[i];
 					data.Img = "data:image/png;base64," + data.Img;
-				}
+				}*/
 				sap.ui.getCore().getElementById("iddynamicView--HLay").setModel(oModel);
 			},
 			error:function(err){
