@@ -1,0 +1,172 @@
+/* .uibody{
+	background-image: url("nomination/everest.jpg") !important;
+}  */
+
+.uibody{
+	background-image: url("../images/Rewards/everest.jpg") !important;
+	width : 100% !important;
+	height : 100% !important;
+} 
+
+.nomination{
+	margin-top: 9%;
+	margin-left: -10% !important;
+	width : 200% !important;
+}    
+.Leftarrow {
+    color: white !important;
+    font-size : 5vh !important;
+    margin-top: 7% !important;
+}
+
+.Rightarrow {
+    color:  white !important;
+    font-size : 5vh !important;
+    margin-top: 7%;
+}
+
+.Category {
+	font-weight: bold;
+    font-size: 10vh !important;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 3%;
+    padding-right: 1%;
+    padding-bottom: 3%;
+    padding-left: 1%;
+    font-family:  "Times New Roman" !important; 
+    font-style: italic;
+	color: Black !important;
+	text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white  !important;
+	
+}
+ .Nominationlayout {
+    margin-top: 7%;  
+    margin-left: 22%;  
+    }
+.Nominee {
+	text-align : center !important;
+	font-weight: bold;
+    font-size: 5vh !important;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    font-family: "Times New Roman" !important;
+    font-style: italic;
+	color: white !important;
+	text-shadow: 2px 2px 5px red  !important; 	
+}
+
+.Combobox {
+	text-align : center !important;
+	font-size: 1.5em !important;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-left :10%;
+    font-size: 1em !important;
+    width : 100% !important;
+}
+
+.Description {
+	text-align : center !important;
+	font-size: 1em !important;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-size: 1em !important;
+    margin-top: 2%;
+    margin-left: 27%;
+}
+.image_desc{
+	margin-top: 60% !important;  
+	margin-left: 20% !important;
+}
+.Nomineepic{
+	width : 32vh !important;
+	height : 25vh !important;
+}
+ .Description_person {
+text-align : center !important;
+font-weight : bold !important;
+	font-size: 1.5em !important;
+    margin-top: 9%!important;
+    enabled: false !important;
+    }
+   
+ .Buttonlayout {
+
+    margin-left: 20% !important;
+    margin-top: 7%!important;
+    }
+    
+.Save {
+ 	text-align : center !important;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-size: 1.5em !important;
+    color :White !important;
+    margin-left: 50% !important;
+    width: 15vh !important;
+    height: 7vh !important;
+    font-weight: bold;
+    background-color:#0040ff  !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    border-style: groove !important;
+    }
+    
+.Submit {
+	text-align : center !important;
+	font-size: 1.5em !important;
+    margin-left: 90% !important;
+    color :White !important;
+    width: 15vh !important;
+    height: 7vh !important;
+    font-weight: bold;
+    background-color:#00b33c  !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    border-style: groove !important;
+    
+    }
+
+ .Discard {
+    text-align : center !important;
+	font-size: 1.5em !important;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-left: 130% !important;
+    color :White !important;
+    width: 15vh !important;
+    height: 7vh !important;
+    font-weight: bold;
+    background-color:#ff8c1a  !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    border-style: groove !important;
+    }       
+.Lists{
+  	margin-left:92% !important;
+  	margin-top:25% !important;
+  	font-weight : bold !important;
+} 
+.Submittedlist{
+  	margin-top: 10% !important;
+  	font-weight : bold !important;
+  	font-size: 100%;
+}   
+.Savedlist{
+  	font-weight : bold !important;
+  	font-size: 100%;
+  	width: 50vh !important;
+    height: 100vh !important;
+}   
