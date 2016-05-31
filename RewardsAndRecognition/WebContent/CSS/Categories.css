@@ -3,24 +3,15 @@
             
 
 
-
-
-
-
-
-    
-        
-    Image{
-   margin: 20px 12px;
-    
-    }   
-    
-    .img{
-      margin: 20px 12px;
+ .img{
+      margin: 200px 0px;
+      border-radius: 50%; 
     }
     
    .img1{
-      margin: 20px 90px;
+       margin: 50px 90px;
+       border-radius: 50%;
+        
     }
                   
 body{
