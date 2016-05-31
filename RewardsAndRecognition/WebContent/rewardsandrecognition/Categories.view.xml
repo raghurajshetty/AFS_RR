@@ -4,13 +4,13 @@
   
 												
  <layout:HorizontalLayout>
- <Image src = "Images/award_categories_02.jpg" 
+ <Image src = "images/Categories/award_categories_02.jpg" 
             width="100%" alt="" class = "">
                </Image>    
                </layout:HorizontalLayout>
 <!--               <layout:HorizontalLayout> -->
  <layout:VerticalLayout>	
- <Image src = "Images/Passion2.jpg" 
+ <Image src = "images/Categories/Passion2.jpg" 
              width="100%"
             class = "img">
               </Image> 
@@ -24,13 +24,13 @@
 			
 			 <layout:VerticalLayout>
 			
-			 <Image src = "Images/customer_focus.jpg" 
+			 <Image src = "images/Categories/customer_focus.jpg" 
               width="65%"
              
             class = "img1">
               </Image> 
 			 
-			 <Image src = "Images/Q3.jpg" 
+			 <Image src = "images/Categories/Q3.jpg" 
              width="65%"
             
             class = "img1">
@@ -38,13 +38,13 @@
                </layout:VerticalLayout>
                <layout:VerticalLayout>
                
-                <Image src = "Images/ot1.jpg" 
+                <Image src = "images/Categories/ot1.jpg" 
               width="65%"
              
             class = "img1">
               </Image> 
                
-           <Image src = "Images/SPOT.png" 
+           <Image src = "images/Categories/SPOT.png" 
               width="57%"
              
             class = "img1">
@@ -52,7 +52,7 @@
 			 		
 			 </layout:VerticalLayout>		
 			 <layout:VerticalLayout>	
-			             <Image src = "Images/Innovation.jpg" 
+			             <Image src = "images/Categories/Innovation.jpg" 
              width="100%"  
          class = "img" >
               </Image> 
