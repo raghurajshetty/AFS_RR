@@ -1,6 +1,6 @@
 /* Designing WelcomePage background */
 
-#shellContainer-hdr{
+/* #shellContainer-hdr{
 	background-color:black;
 }
 
@@ -17,7 +17,7 @@
 	background-color: #FDF3E7 !important;
 }
 
-/* Designing WelcomePage Image */
+Designing WelcomePage Image
 center{
 	width:inherit;
 }
@@ -46,4 +46,4 @@ center > div div:nth-child(2) > button{
 	width: 20%;
     height: 5vh;
     border-radius: 2rem !important;
-}
+ }*/
