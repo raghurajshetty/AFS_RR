@@ -26,3 +26,10 @@
 body{
 	background: firebrick !important;
 }
+
+/* CSS change by Raghu */
+
+#idCategories--categoriesList div > Img{
+	border-radius:6rem;
+	margin: 1rem;
+} 

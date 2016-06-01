@@ -51,7 +51,10 @@
        class = "img" >
             </Image> 
             </layout:VerticalLayout>	 -->
-		<layout:VerticalLayout id="categoriesList" >
-			<Image src="images/Categories/Passion.jpg"></Image>
+		<layout:VerticalLayout id="categoriesList" content="{/d/results}"
+							   width="100%">
+			<Image src="{ImgLink}"
+				   press="navToRewards">
+			</Image>
 		</layout:VerticalLayout>
 </core:View>
