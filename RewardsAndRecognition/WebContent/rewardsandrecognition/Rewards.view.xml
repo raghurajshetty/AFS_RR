@@ -24,25 +24,26 @@
                class = "nomination">                   
                   <html:center>
                   
-	                  <core:Icon
-	                  src ="sap-icon://navigation-left-arrow"
-	                  class ="Leftarrow"
-	                  press ="Pressleft"
-	                  >
-	                  </core:Icon>
+	                 <layout:HorizontalLayout id="categoryLay">
+		                  <core:Icon
+		                  src ="sap-icon://navigation-left-arrow"
+		                  class ="Leftarrow"
+		                  press ="Pressleft"
+		                  >
+		                  </core:Icon>
+		                  
+		                  <TextView
+		                  class = "Category"
+		                   text="Passion"  >
+		                   </TextView>
 	                  
-	                  <Label
-	                  class = "Category"
-	                   text="Passion"  >
-	                   </Label>
-                  
-	                  <core:Icon
-	                  src ="sap-icon://navigation-right-arrow"
-	                  class ="Rightarrow"
-	                  press ="Pressright"
-	                  >
-	                  </core:Icon>
-                  
+		                  <core:Icon
+		                  src ="sap-icon://navigation-right-arrow"
+		                  class ="Rightarrow"
+		                  press ="Pressright"
+		                  >
+		                  </core:Icon>
+                  	 </layout:HorizontalLayout>
                   
                   
                   	<layout:HorizontalLayout
