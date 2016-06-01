@@ -3,7 +3,7 @@
 			xmlns:layout="sap.ui.layout">	
   
 												
-<<<<<<< HEAD
+
  <layout:HorizontalLayout>
  <Image src = "images/Categories/award_categories_02.jpg" 
             width="100%" alt="" class = "">
