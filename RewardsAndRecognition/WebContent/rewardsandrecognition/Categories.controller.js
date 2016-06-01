@@ -37,7 +37,7 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 					data = oData.d.results[i];
 					data.Img = "data:image/png;base64," + data.Img;
 				}*/
-				sap.ui.getCore().getElementById("iddynamicView--HLay").setModel(oModel);
+				sap.ui.getCore().getElementById("idCategories--categoriesList").setModel(oModel);
 			},
 			error:function(err){
 				console.log(err);

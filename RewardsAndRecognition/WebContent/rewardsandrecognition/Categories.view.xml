@@ -51,7 +51,7 @@
        class = "img" >
             </Image> 
             </layout:VerticalLayout>	 -->
-		<layout:VerticalLayout items="d/results">
-			<Image src="{}"></Image>
+		<layout:VerticalLayout id="categoriesList" >
+			<Image src="images/Categories/Passion.jpg"></Image>
 		</layout:VerticalLayout>
 </core:View>
