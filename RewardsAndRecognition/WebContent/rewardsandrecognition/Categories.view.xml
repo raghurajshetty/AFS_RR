@@ -10,18 +10,8 @@
                </Image>    
                </layout:HorizontalLayout>
 <!--               <layout:HorizontalLayout> -->
- <layout:VerticalLayout>	
- <Image src = "images/Categories/Passion2.jpg" 
-             width="100%"
-            class = "img">
-      </Image> 
-              
-=======
- 
-	 <Image src = "images/Categories/awardCategories.jpg" 
-	        width="100%" alt="" class = "">
-	 </Image>    
->>>>>>> branch 'master' of https://github.com/raghurajshetty/AFS_RR.git
+
+
 
 
 	 <!-- <layout:VerticalLayout>	
