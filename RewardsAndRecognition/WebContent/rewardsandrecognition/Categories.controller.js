@@ -23,9 +23,26 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 * This hook is the same one that SAPUI5 controls get after being rendered.
 * @memberOf akila_rnr.Akila_DashBoard
 */
-//	onAfterRendering: function() {
-//
-//	},
+	onAfterRendering: function() {
+		var data;
+		jQuery.ajax({
+			url:"https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/categoriesSet",
+			dataType:"json",
+			crossDomain:true,
+			success:function(oData){
+				console.log(oData);
+				var oModel = new sap.ui.model.json.JSONModel();
+				oModel.setData(oData);
+				/*for(var i=0;i<oData.d.results.length;i++){
+					data = oData.d.results[i];
+					data.Img = "data:image/png;base64," + data.Img;
+				}*/
+				sap.ui.getCore().getElementById("idCategories--categoriesList").setModel(oModel);
+			},
+			error:function(err){
+				console.log(err);
+			}})
+	},
 
 /**
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
@@ -34,5 +51,13 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 //	onExit: function() {
 //
 //	}
+	
+	navToRewards:function(){
+		
+		var oShell = sap.ui.getCore().byId("shellContainer");
+		oShell.removeAllContent();
+		var rewardsView = sap.ui.getCore().byId("idRewards");
+		oShell.addContent(rewardsView);
+	}
 
 });

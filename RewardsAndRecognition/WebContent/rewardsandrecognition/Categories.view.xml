@@ -3,6 +3,7 @@
 			xmlns:layout="sap.ui.layout">	
   
 												
+<<<<<<< HEAD
  <layout:HorizontalLayout>
  <Image src = "images/Categories/award_categories_02.jpg" 
             width="100%" alt="" class = "">
@@ -15,47 +16,60 @@
             class = "img">
       </Image> 
               
+=======
+ 
+	 <Image src = "images/Categories/awardCategories.jpg" 
+	        width="100%" alt="" class = "">
+	 </Image>    
+>>>>>>> branch 'master' of https://github.com/raghurajshetty/AFS_RR.git
 
-              
-              
-			 </layout:VerticalLayout> 
-<!-- </layout:HorizontalLayout> -->
+
+	 <!-- <layout:VerticalLayout>	
+			 <Image 	src = "images/Categories/Passion2.jpg" 
+			            width="100%"
+			            class = "img"
+			            press="navToRewards">
+			</Image> 
+	 </layout:VerticalLayout> 
 			
-			
-			 <layout:VerticalLayout>
-			
+	 <layout:VerticalLayout>
+	
 			 <Image src = "images/Categories/customer_focus.jpg" 
-              width="65%"
-             
-            class = "img1">
-              </Image> 
+		            width="65%"
+		            class = "img1">
+		     </Image> 
 			 
-			 <Image src = "images/Categories/Q3.jpg" 
-             width="65%"
-            
-            class = "img1">
-              </Image> 
-               </layout:VerticalLayout>
-               <layout:VerticalLayout>
-               
-                <Image src = "images/Categories/ot1.jpg" 
-              width="65%"
+	 <Image src = "images/Categories/Q3.jpg" 
+           width="65%"
+          
+          class = "img1">
+            </Image> 
+             </layout:VerticalLayout>
+             <layout:VerticalLayout>
              
-            class = "img1">
-              </Image> 
-               
-           <Image src = "images/Categories/SPOT.png" 
-              width="57%"
+              <Image src = "images/Categories/ot1.jpg" 
+            width="65%"
+           
+          class = "img1">
+            </Image> 
              
-            class = "img1">
-              </Image> 
-			 		
-			 </layout:VerticalLayout>		
-			 <layout:VerticalLayout>	
-			             <Image src = "images/Categories/Innovation.jpg" 
-             width="100%"  
-         class = "img" >
-              </Image> 
-              </layout:VerticalLayout>	
-		
+         <Image src = "images/Categories/SPOT.png" 
+            width="57%"
+           
+          class = "img1">
+            </Image> 
+	 		
+	 </layout:VerticalLayout>		
+	 <layout:VerticalLayout>	
+	             <Image src = "images/Categories/Innovation.jpg" 
+           width="100%"  
+       class = "img" >
+            </Image> 
+            </layout:VerticalLayout>	 -->
+		<layout:VerticalLayout id="categoriesList" content="{/d/results}"
+							   width="100%">
+			<Image src="{ImgLink}"
+				   press="navToRewards">
+			</Image>
+		</layout:VerticalLayout>
 </core:View>
