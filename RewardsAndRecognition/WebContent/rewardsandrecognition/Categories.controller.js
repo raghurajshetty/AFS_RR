@@ -23,9 +23,9 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 * This hook is the same one that SAPUI5 controls get after being rendered.
 * @memberOf akila_rnr.Akila_DashBoard
 */
-//	onAfterRendering: function() {
-//
-//	},
+	onAfterRendering: function() {
+		
+	},
 
 /**
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
@@ -34,5 +34,13 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 //	onExit: function() {
 //
 //	}
+	
+	navToRewards:function(){
+		
+		var oShell = sap.ui.getCore().byId("shellContainer");
+		oShell.removeAllContent();
+		var rewardsView = sap.ui.getCore().byId("idRewards");
+		oShell.addContent(rewardsView);
+	}
 
 });

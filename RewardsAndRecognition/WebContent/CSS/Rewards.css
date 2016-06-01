@@ -5,14 +5,14 @@
 .uibody{
 	background-image: url("../images/Rewards/everest.jpg") !important;
 	width : 100% !important;
-	height : 100% !important;
+	height: 90vh;
 } 
 
-.nomination{
+/* .nomination{
 	margin-top: 9%;
 	margin-left: -10% !important;
 	width : 200% !important;
-}    
+}   */  
 .Leftarrow {
     color: white !important;
     font-size : 5vh !important;
@@ -41,10 +41,10 @@
 	text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white  !important;
 	
 }
- .Nominationlayout {
+ /* .Nominationlayout {
     margin-top: 7%;  
     margin-left: 22%;  
-    }
+    } */
 .Nominee {
 	text-align : center !important;
 	font-weight: bold;
@@ -71,7 +71,7 @@
     width : 100% !important;
 }
 
-.Description {
+/* .Description {
 	text-align : center !important;
 	font-size: 1em !important;
     padding-top: 1%;
@@ -81,10 +81,10 @@
     font-size: 1em !important;
     margin-top: 2%;
     margin-left: 27%;
-}
+} */
 .image_desc{
-	margin-top: 60% !important;  
-	margin-left: 20% !important;
+	/* margin-top: 60% !important;  
+	margin-left: 20% !important; */
 }
 .Nomineepic{
 	width : 32vh !important;
@@ -98,13 +98,13 @@ font-weight : bold !important;
     enabled: false !important;
     }
    
- .Buttonlayout {
+ /* .Buttonlayout {
 
     margin-left: 20% !important;
     margin-top: 7%!important;
-    }
+    } */
     
-.Save {
+/* .Save {
  	text-align : center !important;
     padding-top: 1%;
     padding-right: 1%;
@@ -120,7 +120,7 @@ font-weight : bold !important;
     font-family: "Times New Roman", Times, serif !important;
     font-style: italic !important;
     border-style: groove !important;
-    }
+    } */
     
 .Submit {
 	text-align : center !important;
@@ -137,7 +137,7 @@ font-weight : bold !important;
     
     }
 
- .Discard {
+/*  .Discard {
     text-align : center !important;
 	font-size: 1.5em !important;
     padding-top: 10px;
@@ -153,20 +153,129 @@ font-weight : bold !important;
     font-family: "Times New Roman", Times, serif !important;
     font-style: italic !important;
     border-style: groove !important;
-    }       
-.Lists{
+    }     */   
+/* .Lists{
   	margin-left:92% !important;
   	margin-top:25% !important;
   	font-weight : bold !important;
-} 
+}  */
 .Submittedlist{
   	margin-top: 10% !important;
   	font-weight : bold !important;
   	font-size: 100%;
 }   
-.Savedlist{
+/* .Savedlist{
   	font-weight : bold !important;
   	font-size: 100%;
   	width: 50vh !important;
     height: 100vh !important;
+}    */
+
+
+/* CSS Change by Raghu */
+.sapUiUx3ShellCanvas .sapUiUx3ShellContent{
+	  padding-left: 0px !important;
+      padding-right: 0px !important;
+}
+
+#idRewards > div > div:nth-child(1){
+	display: inline-block;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+.nomination{
+	margin-top: 9%;
+    width: 100% !important;
+}
+ 
+#idRewards > div > div:nth-child(2){
+	display: inline-block;
+    width:50%;
+}
+
+.Nominationlayout {
+    margin-top: 7%;  
+}
+
+.Description {
+	text-align : center !important;
+	font-size: 1em !important;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-size: 1em !important;
+    margin-top: 2%;
+    margin-left: 6%;
+}
+
+.Buttonlayout {
+    margin-top: 7%!important;
+}
+
+.Save {
+ 	text-align : center !important;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-size: 1.5em !important;
+    color :White !important;
+    margin-left: 0% !important;
+    width: 15vh !important;
+    height: 7vh !important;
+    font-weight: bold;
+    background-color:#0040ff  !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    border-style: groove !important;
+}
+
+.Submit {
+	text-align : center !important;
+	font-size: 1.5em !important;
+    margin-left: 40% !important;
+    color :White !important;
+    width: 15vh !important;
+    height: 7vh !important;
+    font-weight: bold;
+    background-color:#00b33c  !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    border-style: groove !important;
+    
+}
+
+.Discard {
+    text-align : center !important;
+	font-size: 1.5em !important;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-left: 80% !important;
+    color :White !important;
+    width: 15vh !important;
+    height: 7vh !important;
+    font-weight: bold;
+    background-color:#ff8c1a  !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    border-style: groove !important;
+    }  
+    
+#idRewards > div > div:nth-child(3){
+	display: inline-block;
+}
+
+.Lists{
+  	margin-top:25% !important;
+  	font-weight : bold !important;
+} 
+
+.Savedlist{
+  	font-weight : bold !important;
+  	font-size: 100%;
+  	width: 50vh !important;
 }   

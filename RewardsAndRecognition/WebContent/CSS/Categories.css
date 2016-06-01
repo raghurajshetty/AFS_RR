@@ -1,8 +1,17 @@
 @CHARSET "ISO-8859-1";
 
             
+#shellContainer-wsBar{
+	background-color:black;
+}
 
+#shellContainer-hdr{
+	background-color:black;
+}
 
+.sapUiUx3ShellHeaderTitleLeft > span{
+	color:white !important;
+}
  .img{
       margin: 200px 0px;
       border-radius: 50%; 

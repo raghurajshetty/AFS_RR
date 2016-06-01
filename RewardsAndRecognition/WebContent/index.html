@@ -3,8 +3,8 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
-		<link rel="stylesheet" type="text/css" href="CSS/welcomePage.css">
-		<link rel="stylesheet" type="text/css" href="CSS/dashboardPage.css">
+		<!-- <link rel="stylesheet" type="text/css" href="CSS/welcomePage.css">
+		<link rel="stylesheet" type="text/css" href="CSS/dashboardPage.css"> -->
 		<link rel="stylesheet" type="text/css" href="CSS/Categories.css">
 		<link rel="stylesheet" type="text/css" href="CSS/Rewards.css">
 
@@ -23,14 +23,16 @@
 								showSearchTool:false,
 								showFeederTool:false,
 								showPane	  :false,
+								showInspectorTool:false,
 								paneWidth     :0,
+								fullHeightContent:true,
 								
 				});
 				/* var welcomeView = sap.ui.view({id:"idwelcomePage", viewName:"rewardsandrecognition.welcomePage", type:sap.ui.core.mvc.ViewType.XML});
-				var dashboardView = sap.ui.view({id:"iddashboardPage", viewName:"rewardsandrecognition.dashboardPage", type:sap.ui.core.mvc.ViewType.XML});
-				var categoryView = sap.ui.view({id:"idCategories", viewName:"rewardsandrecognition.Categories", type:sap.ui.core.mvc.ViewType.XML}); */
-				var RewardsView = sap.ui.view({id:"idRewards", viewName:"rewardsandrecognition.Rewards", type:sap.ui.core.mvc.ViewType.XML});
-				oShell.addContent(RewardsView);
+				var dashboardView = sap.ui.view({id:"iddashboardPage", viewName:"rewardsandrecognition.dashboardPage", type:sap.ui.core.mvc.ViewType.XML});*/
+				var categoryView = sap.ui.view({id:"idCategories", viewName:"rewardsandrecognition.Categories", type:sap.ui.core.mvc.ViewType.XML}); 
+				var rewardsView = sap.ui.view({id:"idRewards", viewName:"rewardsandrecognition.Rewards", type:sap.ui.core.mvc.ViewType.XML});
+				oShell.addContent(categoryView);
 				oShell.placeAt("content");
 		</script>
 
