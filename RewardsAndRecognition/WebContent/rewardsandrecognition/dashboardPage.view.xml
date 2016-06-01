@@ -4,7 +4,8 @@
 			<layout:HorizontalLayout>
 				<layout:VerticalLayout>
 					<Button
-						text="Customer Focus">
+					text = "Customer Focus"
+					class="but" >
 					</Button>
 					<Button
 						text="Team Star"

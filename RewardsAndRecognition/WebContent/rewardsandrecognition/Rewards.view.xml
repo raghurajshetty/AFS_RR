@@ -1,0 +1,147 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+		controllerName="rewardsandrecognition.Rewards" xmlns:html="http://www.w3.org/1999/xhtml" 
+	            xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:t="sap.tnt">
+
+<layout:HorizontalLayout class = "uibody"> 
+					<layout:VerticalLayout
+					class = "image_desc">
+					<m:Image
+					class ="Nomineepic"
+					src ="images/Rewards/nominee_pic.jpg">					
+                    </m:Image>
+					 <m:TextArea class="Description_person"
+                        rows="4"
+                        cols="33"
+                        enabled = "false"
+                        value = "Raghuraj Shetty
+                        
+                        NO WORDS TO DESCRIBE">
+                     </m:TextArea>                 
+					</layout:VerticalLayout>
+         <layout:VerticalLayout
+                  class = "nomination">                   
+                  <html:center>
+                  
+                  <core:Icon
+                  src ="sap-icon://navigation-left-arrow"
+                  class ="Leftarrow"
+                  press ="Pressleft"
+                  >
+                  </core:Icon>
+                  
+                  <Label
+                  class = "Category"
+                   text="Passion"  >
+                   </Label>
+                  
+                  <core:Icon
+                  src ="sap-icon://navigation-right-arrow"
+                  class ="Rightarrow"
+                  press ="Pressright"
+                  >
+                  </core:Icon>
+                  
+                  </html:center>
+                  
+                  <layout:HorizontalLayout
+                  class = "Nominationlayout">
+                  
+                  <Label text="Nominee" 
+                         class = "Nominee" >
+                         </Label>
+  
+                  <m:ComboBox
+                  class = "Combobox"
+                  id = "test">
+                  <core:Item
+                  text = "A" >
+                  </core:Item>
+                  <core:Item
+                  text = "B" >
+                  </core:Item>
+                  </m:ComboBox>    
+                  
+                  </layout:HorizontalLayout>               
+                   
+                  <m:TextArea class="Description"
+                  rows="5"
+                  cols="53">
+                  </m:TextArea>
+                  <layout:HorizontalLayout
+                  class = "Buttonlayout"> 
+                  <Button class = "Save"
+						text="Save"
+						press="">
+					</Button>
+					<Button class = "Submit"
+						text="Submit"
+						press="">
+					</Button>
+					<Button class ="Discard"
+						text="Discard"
+						press="">
+					</Button>				
+					</layout:HorizontalLayout>						
+<!-- 					<layout:HorizontalLayout
+					class = "image_desc">
+					<m:Image
+					class ="Nomineepic"
+					src ="css/nomination/nominee_pic.jpg">					
+                    </m:Image>
+					 <m:TextArea class="Description_person"
+                        rows="2"
+                        cols="45">
+                     </m:TextArea>
+					</layout:HorizontalLayout> -->
+         </layout:VerticalLayout>
+         
+         <layout:VerticalLayout
+         class="Lists">
+         <m:List
+         class = "Submittedlist"
+         headerText = "Submitted Nominations"
+         growing="true">
+         <m:DisplayListItem
+         label="Person 1"
+         value="category">
+         </m:DisplayListItem>
+         <m:DisplayListItem
+         label="Person 2"
+         value="category">
+         </m:DisplayListItem>     
+         <m:DisplayListItem
+         label="Person 3"
+         value="category">
+         </m:DisplayListItem>
+         <m:DisplayListItem
+         label="Person 4"
+         value="category">
+         </m:DisplayListItem>           
+         </m:List>
+         
+         <m:List
+         class = "Savedlist"
+         headerText = "Saved Nominations"
+         growing="true">
+         <m:DisplayListItem
+         label="Person 1"
+         value="category">
+         </m:DisplayListItem>
+         <m:DisplayListItem
+         label="Person 2"
+         value="category">
+         </m:DisplayListItem>
+         <m:DisplayListItem
+         label="Person 3"
+         value="category">
+         </m:DisplayListItem>
+         <m:DisplayListItem
+         label="Person 4"
+         value="category">
+         </m:DisplayListItem>         
+         </m:List>
+
+         </layout:VerticalLayout>
+</layout:HorizontalLayout>	
+	
+</core:View>

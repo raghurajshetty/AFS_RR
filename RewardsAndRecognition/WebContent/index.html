@@ -5,7 +5,8 @@
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 		<link rel="stylesheet" type="text/css" href="CSS/welcomePage.css">
 		<link rel="stylesheet" type="text/css" href="CSS/dashboardPage.css">
-		<script src="extlib/three.js"></script>
+		<link rel="stylesheet" type="text/css" href="CSS/Categories.css">
+		<link rel="stylesheet" type="text/css" href="CSS/Rewards.css">
 
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
@@ -25,9 +26,11 @@
 								paneWidth     :0,
 								
 				});
-				var welcomeView = sap.ui.view({id:"idwelcomePage", viewName:"rewardsandrecognition.welcomePage", type:sap.ui.core.mvc.ViewType.XML});
+				/* var welcomeView = sap.ui.view({id:"idwelcomePage", viewName:"rewardsandrecognition.welcomePage", type:sap.ui.core.mvc.ViewType.XML});
 				var dashboardView = sap.ui.view({id:"iddashboardPage", viewName:"rewardsandrecognition.dashboardPage", type:sap.ui.core.mvc.ViewType.XML});
-				oShell.addContent(dashboardView);
+				var categoryView = sap.ui.view({id:"idCategories", viewName:"rewardsandrecognition.Categories", type:sap.ui.core.mvc.ViewType.XML}); */
+				var RewardsView = sap.ui.view({id:"idRewards", viewName:"rewardsandrecognition.Rewards", type:sap.ui.core.mvc.ViewType.XML});
+				oShell.addContent(RewardsView);
 				oShell.placeAt("content");
 		</script>
 
