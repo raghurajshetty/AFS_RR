@@ -1,15 +1,39 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
 			controllerName="rewardsandrecognition.welcomePage" xmlns:html="http://www.w3.org/1999/xhtml"
 			xmlns:layout="sap.ui.layout">
-			<html:center>
-			<layout:VerticalLayout>	
-			<Image	
-					src="images/welcome/handshake.jpg">
-			</Image>
-			<Button
-					text="next"
-					press="gofwd">
-			</Button>
-			</layout:VerticalLayout>
-			</html:center>
+		<html:h1 class="c1">Welcome to Rewards and Recognition Portal</html:h1>
+
+<html:figure class="slider">
+<html:figure>
+<Image src="welcome/IMG_3484.JPG" >
+        </Image>
+</html:figure>
+<html:figure>
+<Image src="welcome/IMG_3542.JPG" >
+        </Image>
+</html:figure>
+<html:figure>
+<Image src="welcome/20141003_102102.jpg" >
+        </Image>
+</html:figure>
+<html:figure>
+<Image src="welcome/IMG_20141002_175937.jpg" >
+        </Image>
+</html:figure>
+</html:figure>
+
+
+<html:center>       	
+<Button class="but"
+        text="Login"
+        icon="welcome/login.png"> 	
+<tooltip>
+<RichTooltip 
+            title="Single Sign On"
+            text="SAP SSO Mapped"
+            >
+</RichTooltip>
+</tooltip>
+</Button>
+</html:center> 
 </core:View>
