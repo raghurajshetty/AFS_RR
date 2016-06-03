@@ -14,7 +14,14 @@
 				data-sap-ui-theme="sap_bluecrystal">
 		</script>
 		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required only -->
-
+		<script type="text/javascript">
+			function LogOut(){
+				var oShell = sap.ui.getCore().byId("shellContainer");
+				oShell.removeAllContent();
+				var welcomeView = sap.ui.getCore().byId("idwelcomePage");
+				oShell.addContent(welcomeView);
+			}
+		</script>
 		<script>
 				sap.ui.localResources("rewardsandrecognition");
 				var oShell = new sap.ui.ux3.Shell("shellContainer",{
@@ -26,11 +33,14 @@
 								showInspectorTool:false,
 								paneWidth     :0,
 								fullHeightContent:true,
-								headerItems:[
+								logout:function(){
+									LogOut()
+								}
+								/* headerItems:[
 								             	new sap.ui.commons.Button({
 								             			text:"SSO Login"
 								             	})
-								             ]
+								             ] */
 								
 				});
 				var welcomeView = sap.ui.view({id:"idwelcomePage", viewName:"rewardsandrecognition.welcomePage", type:sap.ui.core.mvc.ViewType.XML});

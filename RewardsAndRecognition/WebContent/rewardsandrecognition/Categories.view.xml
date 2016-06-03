@@ -7,8 +7,13 @@
  
  <Image src = "images/Categories/awardCategories.jpg" 
             width="100%" alt="" class = "">
-               </Image>    
-
+               </Image>
+    <layout:VerticalLayout>
+    	<Image id="loggedUser" class="loggedUser"></Image>
+    	<TextView id="userName" class="loggedUser nameStyle">
+    	</TextView>	
+    </layout:VerticalLayout>    
+	
 
 
 

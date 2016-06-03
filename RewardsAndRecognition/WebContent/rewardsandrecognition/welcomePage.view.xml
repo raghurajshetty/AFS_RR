@@ -26,7 +26,8 @@
 	 	<html:center>       	
 			<Button class="but"
 			        text="Login"
-			        icon="images/welcome/login.png"> 	
+			        icon="images/welcome/login.png"
+			        press="ssoLogin"> 	
 			<tooltip>
 			<RichTooltip 
 			            title="Single Sign On"

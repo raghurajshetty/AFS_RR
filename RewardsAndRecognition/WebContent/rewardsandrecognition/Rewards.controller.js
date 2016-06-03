@@ -23,9 +23,26 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 * This hook is the same one that SAPUI5 controls get after being rendered.
 * @memberOf rewards.Rewards
 */
-//	onAfterRendering: function() {
-//
-//	},
+	onAfterRendering: function() {
+		
+		sap.ui.getCore().byId("idRewards--selCategory").setText(that._selCategory);
+		var sUrl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/sap/ZREWARDSANDRECOGNITION_SRV/usersSet";
+		
+		$.ajax({
+			url:sUrl,
+			dataType:"json",
+			crossDomain:true,
+			success:function(oData){
+				that._ouserList = oData;
+				var ojsonModel = new sap.ui.model.json.JSONModel();
+				ojsonModel.setData(oData);
+				sap.ui.getCore().byId("idRewards--test").setModel(ojsonModel);
+			},
+			error:function(errLog){
+				console.log(errLog);
+			}
+		})
+	},
 
 /**
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
@@ -34,5 +51,19 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 //	onExit: function() {
 //
 //	}
+	
+	userSelected:function(oEvent){
+		var oUserImage = sap.ui.getCore().byId("idRewards--userSelected");
+		var ojsonModel = new sap.ui.model.json.JSONModel();
+		ojsonModel.setData(that._ouserList);
+		oUserImage.setModel(ojsonModel);
+		oUserImage.bindProperty("src","ProfilePic");
+		oUserImage.bindElement(oEvent.getParameters().selectedItem.getBindingContext().sPath);
+		
+		/*oEvent.getParameters().selectedItem.getBindingContext().sPath*/
+		
+	/*	sap.ui.getCore().byId("idRewards--userSelected").bindContext(
+				oEvent.getParameters().selectedItem.getBindingContext());*/
+	}
 
 });

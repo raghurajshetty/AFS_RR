@@ -24,13 +24,15 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 * @memberOf akila_rnr.Akila_DashBoard
 */
 	onAfterRendering: function() {
-		var data;
+		sap.ui.getCore().byId("idCategories--loggedUser").setSrc(that._oUser.d.ProfilePic);
+		sap.ui.getCore().byId("idCategories--userName").setText(that._oUser.d.Name);
+		/*sap.ui.getCore().byId("idCategories--loggedUser").setSrc("images/profilePic/Raghuraj.jpg");*/
 		jQuery.ajax({
 			url:"https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/categoriesSet",
 			dataType:"json",
 			crossDomain:true,
 			success:function(oData){
-				console.log(oData);
+				that._ocategories = oData;
 				var oModel = new sap.ui.model.json.JSONModel();
 				oModel.setData(oData);
 				/*for(var i=0;i<oData.d.results.length;i++){
@@ -52,8 +54,11 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 //
 //	}
 	
-	navToRewards:function(){
-		
+	navToRewards:function(oEvent){
+		var selIndex = oEvent.getSource().getBindingContext().sPath;
+		var indTab = selIndex.split("/");
+		var categorySel = that._ocategories.d.results[indTab[3]];
+		that._selCategory = categorySel.CategoryName;
 		var oShell = sap.ui.getCore().byId("shellContainer");
 		oShell.removeAllContent();
 		var rewardsView = sap.ui.getCore().byId("idRewards");

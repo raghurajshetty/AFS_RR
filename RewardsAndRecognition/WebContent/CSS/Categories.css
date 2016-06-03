@@ -33,3 +33,18 @@ body{
 	border-radius:6rem;
 	margin: 1rem;
 } 
+
+.loggedUser{
+	position: absolute;
+    right: 10px;
+    margin-top: 1%;
+    width:10%;
+}
+
+.nameStyle{
+	margin-top: 8%;
+    color: white;
+    font-size: 1rem !important;
+    font-family: cursive !important;
+    font-style: italic;
+}

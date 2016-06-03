@@ -35,11 +35,26 @@ sap.ui.controller("rewardsandrecognition.welcomePage", {
 //
 //	}
 	
-	gofwd: function() {
-		var oShell = sap.ui.getCore().byId("shellContainer");
-		oShell.removeAllContent();
-		var dashboardView = sap.ui.getCore().byId("iddashboardPage");
-		oShell.addContent(dashboardView);
+	ssoLogin: function() {
+		
+		var surl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/usersSet(Username='',Team='')";
+		that = this;
+		$.ajax({
+			url: surl,
+			dataType:"json",
+			crossDomain:true,
+			success:function(oData){
+				that._oUser = oData;
+				var oShell = sap.ui.getCore().byId("shellContainer");
+				oShell.removeAllContent();
+				var categoriesView = sap.ui.getCore().byId("idCategories");
+				oShell.addContent(categoriesView);
+			},
+			error:function(errLog){
+				console.log(errLog);
+			}
+		})
+		
 	}
 
 });

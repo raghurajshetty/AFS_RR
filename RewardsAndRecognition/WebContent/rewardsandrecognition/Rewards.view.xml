@@ -6,8 +6,10 @@
 			<layout:VerticalLayout
 				class = "image_desc">
 					<m:Image
+						id="userSelected"
 						class ="Nomineepic"
-						src ="images/Rewards/nominee_pic.jpg">					
+						>
+						<!-- src ="images/Rewards/nominee_pic.jpg" -->					
 		             </m:Image>
 					 <m:TextArea class="Description_person"
 		                 rows="4"
@@ -33,8 +35,8 @@
 		                  </core:Icon>
 		                  
 		                  <TextView
-		                  class = "Category"
-		                   text="Passion"  >
+		                  	id="selCategory"
+		                  	class = "Category">
 		                   </TextView>
 	                  
 		                  <core:Icon
@@ -55,12 +57,11 @@
 			  
 			                  <m:ComboBox
 			                  	class = "Combobox"
-			                  	id = "test">
+			                  	id = "test"
+			                  	items="{/d/results}"
+			                  	selectionChange="userSelected">
 			                  		<core:Item
-			                  			text = "A" >
-			                  		</core:Item>
-			                  		<core:Item
-			                  			text = "B" >
+			                  			text = "{Name}" >
 			                  		</core:Item>
 			                  </m:ComboBox>    
                   
