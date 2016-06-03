@@ -4,12 +4,11 @@
   
 												
 
- <layout:HorizontalLayout>
- <Image src = "images/Categories/award_categories_02.jpg" 
+ 
+ <Image src = "images/Categories/awardCategories.jpg" 
             width="100%" alt="" class = "">
                </Image>    
-               </layout:HorizontalLayout>
-<!--               <layout:HorizontalLayout> -->
+
 
 
 
