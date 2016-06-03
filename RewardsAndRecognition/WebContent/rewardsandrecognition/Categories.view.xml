@@ -62,8 +62,14 @@
             </layout:VerticalLayout>	 -->
 		<layout:VerticalLayout id="categoriesList" content="{/d/results}"
 							   width="100%">
-			<Image src="{ImgLink}"
+			<layout:HorizontalLayout>
+				<Image src="{ImgLink}"
 				   press="navToRewards">
-			</Image>
+				</Image>
+				<FormattedTextView
+						htmlText="{Description}">
+				</FormattedTextView>
+			</layout:HorizontalLayout>
+			
 		</layout:VerticalLayout>
 </core:View>
