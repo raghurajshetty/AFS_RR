@@ -37,7 +37,7 @@ sap.ui.controller("rewardsandrecognition.welcomePage", {
 	
 	ssoLogin: function() {
 		
-		var surl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/usersSet(Username='',Team='')";
+		var surl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/usersSet(Username='SSO')";
 		that = this;
 		$.ajax({
 			url: surl,
