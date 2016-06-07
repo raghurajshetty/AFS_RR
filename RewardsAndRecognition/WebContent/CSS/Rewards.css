@@ -2,10 +2,13 @@
 	background-image: url("nomination/everest.jpg") !important;
 }  */
 
-.uibody{
+#idRewards{
 	background-image: url("../images/Rewards/everest.jpg") !important;
-	width : 100% !important;
-	height: 90vh;
+}
+.uibody{
+	
+	/* width : 100% !important;
+	height: 90vh; */
 } 
 
 /* .nomination{
@@ -330,3 +333,11 @@ font-weight : bold !important;
 span:focus{
 	outline:none;
 } 
+
+.navBack{
+	font-size: 2rem;
+    position: absolute;
+    display: inline-block;
+    color:white;
+}
+}
