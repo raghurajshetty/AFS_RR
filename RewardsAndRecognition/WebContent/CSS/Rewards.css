@@ -3,9 +3,10 @@
 }  */
 
 .uibody{
-	background-image: url("../images/Rewards/everest.jpg") !important;
+	background-image: url("/images/Rewards/wp4.jpg") !important; 
 	width : 100% !important;
 	height: 90vh;
+	
 } 
 
 /* .nomination{

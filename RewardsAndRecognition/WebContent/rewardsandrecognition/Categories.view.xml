@@ -67,7 +67,7 @@
 				   press="navToRewards">
 				</Image>
 				<FormattedTextView
-						htmlText="{Description}">
+						htmlText="{Description}" class="description">
 				</FormattedTextView>
 			</layout:HorizontalLayout>
 			

@@ -24,7 +24,9 @@
     }
                   
 body{
-	background: firebrick !important;
+	/* background: firebrick !important; */
+	background-image: url("../images/Categories/wp4.jpg") !important;
+	
 }
 
 /* CSS change by Raghu */
@@ -42,9 +44,16 @@ body{
 }
 
 .nameStyle{
-	margin-top: 8%;
+	margin-top: 13%;
     color: white;
     font-size: 1rem !important;
     font-family: cursive !important;
     font-style: italic;
+}
+.description{
+	color: black;
+	font-style: italic;
+	font-weight: bold;
+	font-family: cursive !important;
+	font-size: 1rem !important;
 }
