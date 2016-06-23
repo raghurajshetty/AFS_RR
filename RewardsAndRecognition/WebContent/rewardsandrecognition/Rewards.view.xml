@@ -2,7 +2,13 @@
 		controllerName="rewardsandrecognition.Rewards" xmlns:html="http://www.w3.org/1999/xhtml" 
 	            xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:t="sap.tnt">
 
+
+			<core:Icon
+					src="sap-icon://nav-back"
+					press="navtoCat"
+					class="navBack"></core:Icon>
 <layout:HorizontalLayout class = "uibody"> 
+
 			<layout:VerticalLayout
 				class = "image_desc">
 					<m:Image
@@ -107,6 +113,7 @@
 	         		headerText = "Submitted Nominations"
 	         		growing="true"
 	         		growingThreshold="4"
+	         		growingScrollToLoad="true"
 	         		id="subList"
 	         		items="{/d/results}">
 	         		
@@ -132,12 +139,15 @@
 		         <m:List
 			         class = "Savedlist"
 			         headerText = "Saved Nominations"
-			         growing="true">
+			         growing="true"
+			         growingThreshold="4"
+	         		 id="savList"
+	         		 items="{/d/results}">
 				         <m:DisplayListItem
-					         label="Person 1"
-					         value="category">
-				         </m:DisplayListItem>
-				         <m:DisplayListItem
+					         label="{NomiToName}"
+	         				 value="{CategoryName}">
+			         </m:DisplayListItem>
+				         <!-- <m:DisplayListItem
 					         label="Person 2"
 					         value="category">
 				         </m:DisplayListItem>
@@ -148,8 +158,8 @@
 				         <m:DisplayListItem
 					         label="Person 4"
 					         value="category">
-				         </m:DisplayListItem>         
-		         </m:List>
+				         </m:DisplayListItem>    -->    
+		         </m:List> 
 	
 	         </layout:VerticalLayout>
 </layout:HorizontalLayout>	

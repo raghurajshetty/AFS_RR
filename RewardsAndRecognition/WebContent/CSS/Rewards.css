@@ -2,11 +2,11 @@
 	background-image: url("nomination/everest.jpg") !important;
 }  */
 
+<<<<<<< HEAD
 .uibody{
 	background-image: url("/images/Rewards/wp4.jpg") !important; 
 	width : 100% !important;
 	height: 90vh;
-	
 } 
 
 /* .nomination{
@@ -331,3 +331,11 @@ font-weight : bold !important;
 span:focus{
 	outline:none;
 } 
+
+.navBack{
+	font-size: 2rem;
+    position: absolute;
+    display: inline-block;
+    color:white;
+}
+}

@@ -59,6 +59,23 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 			}
 			
 		})
+		
+		var nsUrl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/nominationsSet";
+		
+		$.ajax({
+			url: nsUrl,
+			dataType:"json",
+			crossDomain:true,
+			success:function(oData){
+				var oNomsJson = 	new sap.ui.model.json.JSONModel();
+				oNomsJson.setData(oData);
+				sap.ui.getCore().byId("idRewards--savList").setModel(oNomsJson);
+			},
+			error:function(errLog){
+				console.log(errLog);
+			}
+			
+		})
 	},
 
 /**
