@@ -99,7 +99,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 		
 	/*	sap.ui.getCore().byId("idRewards--userSelected").bindContext(
 				oEvent.getParameters().selectedItem.getBindingContext());*/
-<<<<<<< HEAD
+
 	},
 	
 	navtoCat:function(){
@@ -163,8 +163,6 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 			}
 		});
 
-=======
->>>>>>> refs/remotes/origin/master
 	}
 
 });
