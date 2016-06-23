@@ -4,16 +4,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 		<link rel="stylesheet" type="text/css" href="CSS/welcomePage.css">
-		<!-- <link rel="stylesheet" type="text/css" href="CSS/dashboardPage.css"> -->
 		<link rel="stylesheet" type="text/css" href="CSS/Categories.css">
 		<link rel="stylesheet" type="text/css" href="CSS/Rewards.css">
 
+		<script type="text/javascript" src="extlib/datajs-1.1.2.min.js"></script>
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
 				data-sap-ui-libs="sap.ui.commons,sap.ui.ux3"
 				data-sap-ui-theme="sap_bluecrystal">
 		</script>
-		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required only -->
+		
 		<script type="text/javascript">
 			function LogOut(){
 				var oShell = sap.ui.getCore().byId("shellContainer");
@@ -36,15 +36,9 @@
 								logout:function(){
 									LogOut()
 								}
-								/* headerItems:[
-								             	new sap.ui.commons.Button({
-								             			text:"SSO Login"
-								             	})
-								             ] */
-								
+							
 				});
 				var welcomeView = sap.ui.view({id:"idwelcomePage", viewName:"rewardsandrecognition.welcomePage", type:sap.ui.core.mvc.ViewType.XML});
-				/*var dashboardView = sap.ui.view({id:"iddashboardPage", viewName:"rewardsandrecognition.dashboardPage", type:sap.ui.core.mvc.ViewType.XML});*/
 				var categoryView = sap.ui.view({id:"idCategories", viewName:"rewardsandrecognition.Categories", type:sap.ui.core.mvc.ViewType.XML}); 
 				var rewardsView = sap.ui.view({id:"idRewards", viewName:"rewardsandrecognition.Rewards", type:sap.ui.core.mvc.ViewType.XML});
 				oShell.addContent(welcomeView);

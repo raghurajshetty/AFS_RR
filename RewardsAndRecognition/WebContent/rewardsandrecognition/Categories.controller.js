@@ -29,6 +29,7 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 		/*sap.ui.getCore().byId("idCategories--loggedUser").setSrc("images/profilePic/Raghuraj.jpg");*/
 		jQuery.ajax({
 			url:"https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/categoriesSet",
+			/*url:"/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/categoriesSet",*/
 			dataType:"json",
 			crossDomain:true,
 			success:function(oData){
@@ -58,7 +59,7 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 		var selIndex = oEvent.getSource().getBindingContext().sPath;
 		var indTab = selIndex.split("/");
 		var categorySel = that._ocategories.d.results[indTab[3]];
-		that._selCategory = categorySel.CategoryName;
+		that._selCategory = categorySel;
 		var oShell = sap.ui.getCore().byId("shellContainer");
 		oShell.removeAllContent();
 		var rewardsView = sap.ui.getCore().byId("idRewards");

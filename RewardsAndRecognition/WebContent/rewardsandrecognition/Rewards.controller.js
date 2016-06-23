@@ -25,9 +25,8 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 */
 	onAfterRendering: function() {
 		
-		sap.ui.getCore().byId("idRewards--selCategory").setText(that._selCategory);
+		sap.ui.getCore().byId("idRewards--selCategory").setText(that._selCategory.CategoryName);
 		var sUrl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/sap/ZREWARDSANDRECOGNITION_SRV/usersSet";
-		
 		$.ajax({
 			url:sUrl,
 			dataType:"json",
@@ -36,7 +35,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 				that._ouserList = oData;
 				var ojsonModel = new sap.ui.model.json.JSONModel();
 				ojsonModel.setData(oData);
-				sap.ui.getCore().byId("idRewards--test").setModel(ojsonModel);
+				sap.ui.getCore().byId("idRewards--nomineeSel").setModel(ojsonModel);
 			},
 			error:function(errLog){
 				console.log(errLog);
@@ -44,12 +43,11 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 		})
 		
 		var nUrl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/nominationsSet";
-		
 		$.ajax({
 			url: nUrl,
 			dataType:"json",
 			crossDomain:true,
-			success:function(oData){
+			success:function(oData,oStatus,oRequest){
 				var oNomJson = 	new sap.ui.model.json.JSONModel();
 				oNomJson.setData(oData);
 				sap.ui.getCore().byId("idRewards--subList").setModel(oNomJson);
@@ -58,10 +56,10 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 				console.log(errLog);
 			}
 			
-		})
+		});
 		
-		var nsUrl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/nominationsSet";
 		
+		var nsUrl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/nominations_saveSet";
 		$.ajax({
 			url: nsUrl,
 			dataType:"json",
@@ -93,7 +91,10 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 		oUserImage.setModel(ojsonModel);
 		oUserImage.bindProperty("src","ProfilePic");
 		oUserImage.bindElement(oEvent.getParameters().selectedItem.getBindingContext().sPath);
-		
+		var userselPath = oEvent.getParameters().selectedItem.getBindingContext().sPath;
+		var userArr = userselPath.split("/");
+		that._toUser = that._ouserList.d.results[userArr[3]].Username;
+		that._nomTo = that._ouserList.d.results[userArr[3]].Name;
 		/*oEvent.getParameters().selectedItem.getBindingContext().sPath*/
 		
 	/*	sap.ui.getCore().byId("idRewards--userSelected").bindContext(
@@ -105,6 +106,62 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 		 var oShell = sap.ui.getCore().byId("shellContainer");
 		 oShell.removeAllContent();
 		 oShell.addContent(categoriesView);	 
+	},
+	
+	submitNomination:function(oEvent){
+		var fromUser = that._oUser.d.Username;
+		var nomFrom = that._oUser.d.Name;
+		var toUser = that._toUser;
+		var nomTo = that._nomTo;
+		var catId = that._selCategory.CategoryId;
+		var catName = that._selCategory.CategoryName;
+		var reasonNom = sap.ui.getCore().byId("idRewards--selReason").getValue();
+		var todayDate = new Date();
+		var todayDD = todayDate.getDate();
+		var todayMonth = todayDate.getMonth()+1;
+		var todayYear = todayDate.getFullYear();
+		if(todayDD<10){
+			todayDD = "0"+todayDD;
+		}
+		if(todayMonth<10){
+			todayMonth = "0"+todayMonth;
+		}
+		var today = todayYear+"-"+todayMonth+"-"+todayDD+"T00:00:00";
+/*		var milliSec = todayDate.getTime();
+		var date = "\/Date("+milliSec+")\/";*/
+		
+/*
+		var ojsonDummyPayload = {
+				"FromUser" : "SHETTYRAG",
+				"ToUser" : "PARASURAMAN",
+				"CategoryId" : "CF"
+		};*/
+		
+
+		var ojsonPayload ={
+				"FromUser":fromUser,
+				"ToUser":toUser,
+				"CategoryId":catId,
+				"NomiFromName":nomFrom,
+				"NomiToName":nomTo,
+				"CategoryName":catName,
+				"Reason":reasonNom,
+				"NomDate":today
+		}
+		
+		var oModel = new sap.ui.model.odata.ODataModel("proxy/https/ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/",{
+			json:true
+		});
+		
+		oModel.create("/nominationsSet", ojsonPayload,{
+			success:function(oData,response){
+				console.log(response);
+			},
+			error:function(oError){
+				console.log(oError);
+			}
+		});
+
 	}
 
 });

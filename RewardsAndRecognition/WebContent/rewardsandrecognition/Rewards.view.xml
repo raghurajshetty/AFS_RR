@@ -63,7 +63,7 @@
 			  
 			                  <m:ComboBox
 			                  	class = "Combobox"
-			                  	id = "test"
+			                  	id = "nomineeSel"
 			                  	items="{/d/results}"
 			                  	selectionChange="userSelected">
 			                  		<core:Item
@@ -74,8 +74,9 @@
                   	</layout:HorizontalLayout>               
                    
                   <m:TextArea class="Description"
-                  rows="5"
-                  cols="53">
+                  			  rows="5"
+                  			  cols="53"
+                  			  id="selReason">
                   </m:TextArea>
                   <layout:HorizontalLayout
                   class = "Buttonlayout"> 
@@ -85,7 +86,7 @@
 					</Button>
 					<Button class = "Submit"
 						text="Submit"
-						press="">
+						press="submitNomination">
 					</Button>
 					<Button class ="Discard"
 						text="Discard"
