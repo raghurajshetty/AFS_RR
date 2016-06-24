@@ -36,6 +36,8 @@ sap.ui.controller("rewardsandrecognition.welcomePage", {
 //	}
 	
 	ssoLogin: function() {
+		this._oDialog = this.getView().byId("busyDialog");
+		this._oDialog.open();
 		
 		var surl = "https://ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/usersSet(Username='SSO')";
 		/*var surl = "/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/usersSet(Username='SSO')";*/
@@ -47,6 +49,7 @@ sap.ui.controller("rewardsandrecognition.welcomePage", {
 			crossDomain:true,
 			success:function(oData){
 				that._oUser = oData;
+				that._oDialog.close();
 				var oShell = sap.ui.getCore().byId("shellContainer");
 				oShell.removeAllContent();
 				var categoriesView = sap.ui.getCore().byId("idCategories");

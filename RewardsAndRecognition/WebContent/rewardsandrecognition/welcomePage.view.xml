@@ -36,5 +36,11 @@
 			</RichTooltip>
 			</tooltip>
 			</Button>
-		</html:center>  
+		</html:center>
+		<layout:VerticalLayout>
+			<layout:dependents>
+				<core:Fragment fragmentName="rewardsandrecognition.busyDialog" type="XML">
+				</core:Fragment>
+			</layout:dependents>
+		</layout:VerticalLayout>  
 </core:View>

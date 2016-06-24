@@ -14,6 +14,7 @@
 					<m:Image
 						id="userSelected"
 						class ="Nomineepic"
+						src="images/Rewards/nominee_2016.jpg"
 						>
 						<!-- src ="images/Rewards/nominee_pic.jpg" -->					
 		             </m:Image>
@@ -21,9 +22,8 @@
 		                 rows="4"
 		                 cols="33"
 		                 enabled = "false"
-		                 value = "Raghuraj Shetty
-		                      
-		                  NO WORDS TO DESCRIBE">
+		                 id="userName"
+		                 value="Nominee Details">
 		              </m:TextArea>                 
 			</layout:VerticalLayout>
 			
@@ -82,7 +82,7 @@
                   class = "Buttonlayout"> 
                   <Button class = "Save"
 						text="Save"
-						press="">
+						press="saveNomination">
 					</Button>
 					<Button class = "Submit"
 						text="Submit"
@@ -90,7 +90,7 @@
 					</Button>
 					<Button class ="Discard"
 						text="Discard"
-						press="">
+						press="clearContent">
 					</Button>				
 					</layout:HorizontalLayout>						
 <!-- 					<layout:HorizontalLayout
@@ -143,10 +143,14 @@
 			         growing="true"
 			         growingThreshold="4"
 	         		 id="savList"
+	         		 mode="Delete"
+	         		 delete="savNomDel"
 	         		 items="{/d/results}">
 				         <m:DisplayListItem
 					         label="{NomiToName}"
-	         				 value="{CategoryName}">
+	         				 value="{CategoryName}"
+	         				 type="Active"
+	         				 tap="savetoSubmit">
 			         </m:DisplayListItem>
 				         <!-- <m:DisplayListItem
 					         label="Person 2"

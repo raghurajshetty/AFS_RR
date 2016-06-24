@@ -2,7 +2,7 @@
 	background-image: url("nomination/everest.jpg") !important;
 }  */
 
-<<<<<<< HEAD
+
 .uibody{
 	background-image: url("/images/Rewards/wp4.jpg") !important; 
 	width : 100% !important;
@@ -255,7 +255,7 @@ font-weight : bold !important;
     padding-left: 1%;
     font-size: 1em !important;
     margin-top: 2%;
-    margin-left: 6%;
+    width:80%;
 }
 
 .Buttonlayout {
@@ -270,7 +270,7 @@ font-weight : bold !important;
     padding-left: 1%;
     font-size: 1.5em !important;
     color :White !important;
-    margin-left: 0% !important;
+    margin-left: -100% !important;
     width: 15vh !important;
     height: 7vh !important;
     font-weight: bold;
@@ -283,7 +283,7 @@ font-weight : bold !important;
 .Submit {
 	text-align : center !important;
 	font-size: 1.5em !important;
-    margin-left: 40% !important;
+    margin-left: -5% !important;
     color :White !important;
     width: 15vh !important;
     height: 7vh !important;
@@ -302,7 +302,7 @@ font-weight : bold !important;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-    margin-left: 80% !important;
+    margin-left: 40% !important;
     color :White !important;
     width: 15vh !important;
     height: 7vh !important;
@@ -334,7 +334,7 @@ span:focus{
 
 .navBack{
 	font-size: 2rem;
-    position: absolute;
+    position: fixed;
     display: inline-block;
     color:white;
 }
