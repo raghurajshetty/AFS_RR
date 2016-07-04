@@ -24,6 +24,10 @@ sap.ui.controller("rewardsandrecognition.Categories", {
 * @memberOf akila_rnr.Akila_DashBoard
 */
 	onAfterRendering: function() {
+		/*jQuery(".sapUiUx3ShellHeader-logout").removeAttr("visible");*/
+		jQuery(".sapUiUx3ShellHeader-logout").removeClass("hide");
+		jQuery(".sapUiUx3ShellContent").removeClass("welcomeBackground");
+		jQuery(".sapUiUx3ShellHeaderTitleLeft > span").removeClass("hide");
 		sap.ui.getCore().byId("idCategories--loggedUser").setSrc(that._oUser.d.ProfilePic);
 		sap.ui.getCore().byId("idCategories--userName").setText(that._oUser.d.Name);
 		/*sap.ui.getCore().byId("idCategories--loggedUser").setSrc("images/profilePic/Raghuraj.jpg");*/

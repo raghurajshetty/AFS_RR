@@ -25,10 +25,10 @@
 
 /*jbn was here*/                  
 body{
-background: black;
-	/* background: firebrick !important; */
+/* background: black; */
+	 
 
-	/*background-image: url("../images/Categories/wp4.jpg") !important;*/
+	background-image: url("../images/Categories/wp4.jpg") !important;
 	
 }
 
@@ -60,3 +60,5 @@ background: black;
 	font-family: cursive !important;
 	font-size: 1rem !important;
 }
+
+

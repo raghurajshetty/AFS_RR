@@ -23,9 +23,11 @@ sap.ui.controller("rewardsandrecognition.welcomePage", {
 * This hook is the same one that SAPUI5 controls get after being rendered.
 * @memberOf rewardsandrecognition.welcomePage
 */
-//	onAfterRendering: function() {
-//
-//	},
+	onAfterRendering: function() {
+		jQuery(".sapUiUx3ShellHeader-logout").addClass("hide");
+		jQuery(".sapUiUx3ShellContent").addClass("welcomeBackground");
+		jQuery(".sapUiUx3ShellHeaderTitleLeft > span").addClass("hide");
+	},
 
 /**
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.

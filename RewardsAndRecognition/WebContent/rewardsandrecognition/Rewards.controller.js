@@ -109,7 +109,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 		 that._nomTo = that._ouserList.d.results[userArr[3]].Name;
 		}else{
 			jQuery.sap.require("sap.m.MessageBox");
-			sap.m.MessageBox.alert("No nominee starts with the entered character",{
+			sap.m.MessageBox.alert("Could not find a nominee with that name, please select from the dropdown list",{
 			 	title:"Problem in nominee selection",
 			 	onClose:function(){
 			 		sap.ui.getCore().byId("idRewards").getController().clearContent();
@@ -293,6 +293,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 	clearContent:function(oEvent){
 		this.getView().byId("selReason").setValue('');
 		this.getView().byId("nomineeSel").setValue('');
+		this.getView().byId("nomineeSel").clearSelection();
 		this.getView().byId("userSelected").setSrc('images/Rewards/nominee_2016.jpg');
 		this.getView().byId("userName").setValue('Nominee Details');
 	},
