@@ -22,10 +22,13 @@
        border-radius: 50%;
         
     }
-                  
+
+/*jbn was here*/                  
 body{
+background: black;
 	/* background: firebrick !important; */
-	background-image: url("../images/Categories/wp4.jpg") !important;
+
+	/*background-image: url("../images/Categories/wp4.jpg") !important;*/
 	
 }
 
