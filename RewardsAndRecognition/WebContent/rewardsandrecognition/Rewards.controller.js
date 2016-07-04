@@ -93,19 +93,33 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 	userSelected:function(oEvent){
 		var oUserImage = sap.ui.getCore().byId("idRewards--userSelected");
 		var oUserName  = sap.ui.getCore().byId("idRewards--userName");
-		var ojsonModel = new sap.ui.model.json.JSONModel();
-		ojsonModel.setData(that._ouserList);
-		oUserImage.setModel(ojsonModel);
-		oUserImage.bindProperty("src","ProfilePic");
-		oUserImage.bindElement(oEvent.getParameters().selectedItem.getBindingContext().sPath);
-		
+		if(oEvent.getParameters().selectedItem != null){
 		var userselPath = oEvent.getParameters().selectedItem.getBindingContext().sPath;
 		var userArr = userselPath.split("/");
+		/*var ojsonModel = new sap.ui.model.json.JSONModel();
+		ojsonModel.setData(that._ouserList);
+		oUserImage.setModel(ojsonModel);*/
+		/*oUserImage.bindProperty("src","ProfilePic");
+		oUserImage.bindElement(oEvent.getParameters().selectedItem.getBindingContext().sPath);*/
+		oUserImage.setSrc(that._ouserList.d.results[userArr[3]].ProfilePic);
 		var descString = that._ouserList.d.results[userArr[3]].Name + "\n" + that._ouserList.d.results[userArr[3]].ModuleName + "\n" + 
-						 that._ouserList.d.results[userArr[3]].Team;
-		oUserName.setValue(descString);
-		that._toUser = that._ouserList.d.results[userArr[3]].Username;
-		that._nomTo = that._ouserList.d.results[userArr[3]].Name;
+		 that._ouserList.d.results[userArr[3]].Team;
+		 oUserName.setValue(descString);
+		 that._toUser = that._ouserList.d.results[userArr[3]].Username;
+		 that._nomTo = that._ouserList.d.results[userArr[3]].Name;
+		}else{
+			jQuery.sap.require("sap.m.MessageBox");
+			sap.m.MessageBox.alert("No nominee starts with the entered character",{
+			 	title:"Problem in nominee selection",
+			 	onClose:function(){
+			 		sap.ui.getCore().byId("idRewards").getController().clearContent();
+			 	}
+			});
+		}
+		
+		
+		
+		
 		/*oEvent.getParameters().selectedItem.getBindingContext().sPath*/
 		
 	/*	sap.ui.getCore().byId("idRewards--userSelected").bindContext(
@@ -114,6 +128,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 	},
 	
 	navtoCat:function(){
+		 sap.ui.getCore().byId("idRewards").getController().clearContent();
 		 var categoriesView = sap.ui.getCore().byId("idCategories")
 		 var oShell = sap.ui.getCore().byId("shellContainer");
 		 oShell.removeAllContent();
@@ -122,6 +137,8 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 	
 	submitNomination:function(oEvent){
 		that._oDialog.open();
+		if(this.getView().byId("nomineeSel").getValue() != "" && this.getView().byId("selReason").getValue() != "" ){
+			
 		var fromUser = that._oUser.d.Username;
 		var nomFrom = that._oUser.d.Name;
 		var toUser = that._toUser;
@@ -162,6 +179,9 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 				jQuery.sap.require("sap.m.MessageBox");
 				 sap.m.MessageBox.success(oData.Reason,{
 					 	title:"Nomination Submittion Status",
+					 	onClose:function(){
+					 		sap.ui.getCore().byId("idRewards").getController().clearContent();
+					 	}
 					});
 				 sap.ui.getCore().byId("idRewards").getController().refreshSubNominations();
 			},
@@ -173,11 +193,21 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 				});
 			}
 		});
-
+		}else{
+			jQuery.sap.require("sap.m.MessageBox");
+			sap.m.MessageBox.alert("Please make these checks\n 1) Is the nominee been selected?\n 2) Is the description been maintained?",{
+			 	title:"Problem in submitting Nomination",
+			 	onClose:function(){
+			 		that._oDialog.close();
+			 	}
+			});
+		}
 	},
 	
 	saveNomination:function(oEvent){
 		that._oDialog.open();
+		if(this.getView().byId("nomineeSel").getValue() != "" && this.getView().byId("selReason").getValue() != "" ){
+			
 		var fromUser = that._oUser.d.Username;
 		var nomFrom = that._oUser.d.Name;
 		var toUser = that._toUser;
@@ -218,6 +248,9 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 				jQuery.sap.require("sap.m.MessageBox");
 				 sap.m.MessageBox.success(oData.Reason,{
 					 	title:"Nomination Save Status",
+					 	onClose:function(){
+					 		sap.ui.getCore().byId("idRewards").getController().clearContent();
+					 	}
 					});
 				 sap.ui.getCore().byId("idRewards").getController().refreshSavNominations();
 			},
@@ -229,6 +262,14 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 				});
 			}
 		});
+		
+	  }else{
+		  that._oDialog.close();
+		  jQuery.sap.require("sap.m.MessageBox");
+		  sap.m.MessageBox.alert("Please make these checks\n 1) Is the nominee been selected?\n 2) Is the description been maintained?",{
+			 	title:"Problem in saving Nomination",
+			});
+	  }	
 	},
 	
 	savetoSubmit:function(oEvent){
