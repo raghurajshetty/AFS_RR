@@ -5,7 +5,7 @@
 												
 
  
- <Image src = "images/Categories/awardCategories.jpg" 
+ <Image src = "images/Categories/awc.png" 
             width="100%" alt="" class = "">
                </Image>
     <layout:VerticalLayout>

@@ -23,6 +23,47 @@
 			</html:figure>
 			</html:figure>
 
+<!-- Polaroid begins here -->
+
+		<html:figure class="slider2">
+			<html:figure>
+			<Image src="images/welcome/4.JPG" >
+			        </Image>
+			</html:figure>
+		
+			<html:figure>
+			<Image src="images/welcome/3.JPG" >
+			        </Image>
+			</html:figure>
+			<html:figure>
+			<Image src="images/welcome/2.JPG" >
+			        </Image>
+			</html:figure>
+			<html:figure>
+			<Image src="images/welcome/1.JPG" >
+			        </Image>
+			</html:figure>
+			</html:figure>
+			
+		<html:figure class="slider3">
+			<html:figure>
+			<Image src="images/welcome/1.JPG" >
+			        </Image>
+			</html:figure>
+			<html:figure>
+			<Image src="images/welcome/2.JPG" >
+			        </Image>
+			</html:figure>
+			<html:figure>
+			<Image src="images/welcome/3.JPG" >
+			        </Image>
+			</html:figure>
+			<html:figure>
+			<Image src="images/welcome/4.JPG" >
+			        </Image>
+			</html:figure>
+			</html:figure>
+
 <!-- jbn was here-->			
 		<html:center class="affimg">
 			<html:figure>

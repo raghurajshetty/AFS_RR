@@ -5,13 +5,20 @@
 	background-color:black;
 }
 
+
+
 #shellContainer-hdr{
 	background-color:black;
 }
-
+/*jbn was here*/  
 .sapUiUx3ShellHeaderTitleLeft > span{
-	color:white !important;
+	color:black !important;
 }
+
+.sapUiUx3ShellHeaderButton{
+margin-top:20px;
+}
+
  .img{
       margin: 200px 0px;
       border-radius: 50%; 
@@ -28,7 +35,7 @@ body{
 /* background: black; */
 	 
 
-	background-image: url("../images/Categories/wp4.jpg") !important;
+	background-image: url("../images/Categories/redbg.jpg") !important;
 	
 }
 
