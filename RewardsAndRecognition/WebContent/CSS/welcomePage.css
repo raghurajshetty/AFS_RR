@@ -89,7 +89,7 @@ figure{
 /*jbn was here*/	
 .slider img { 
 	width: 100%; 
-	height: 86vh;
+	height: 84vh;
 	overflow:hidden; 
 	}	     	
 
@@ -150,6 +150,7 @@ figure{
 .slider2 figure { 
   width: 25%; height: auto;
   display: inline-block;  position: inherit;
+  margin-top:2%;
  
 }
 

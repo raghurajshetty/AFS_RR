@@ -274,7 +274,7 @@ font-weight : bold !important;
     width: 15vh !important;
     height: 7vh !important;
     font-weight: bold;
-    background-color:#0040ff  !important;
+    background-color:#381011  !important;
     font-family: "Times New Roman", Times, serif !important;
     font-style: italic !important;
     border-style: groove !important;
@@ -288,7 +288,7 @@ font-weight : bold !important;
     width: 15vh !important;
     height: 7vh !important;
     font-weight: bold;
-    background-color:#00b33c  !important;
+    background-color:#381011  !important;
     font-family: "Times New Roman", Times, serif !important;
     font-style: italic !important;
     border-style: groove !important;
@@ -307,7 +307,7 @@ font-weight : bold !important;
     width: 15vh !important;
     height: 7vh !important;
     font-weight: bold;
-    background-color:#ff8c1a  !important;
+    background-color:#381011  !important;
     font-family: "Times New Roman", Times, serif !important;
     font-style: italic !important;
     border-style: groove !important;
@@ -337,5 +337,4 @@ span:focus{
     position: fixed;
     display: inline-block;
     color:white;
-}
 }

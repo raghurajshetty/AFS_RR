@@ -41,9 +41,27 @@ body{
 
 /* CSS change by Raghu */
 
+#idCategories--categoriesList div{
+	width:80%;
+}
+
+#idCategories--categoriesList div div{
+	width:100%;
+}
+
+#idCategories--categoriesList div > div div:first-child{
+    width: 20%;
+    margin: 2%;
+} 
+
+#idCategories--categoriesList div > div div:nth-child(2){
+    width: 80%;
+} 
+
 #idCategories--categoriesList div > Img{
-	border-radius:6rem;
-	margin: 1rem;
+	border-radius: 4rem;
+	width:100%;
+	outline:none;
 } 
 
 .loggedUser{
@@ -61,11 +79,9 @@ body{
     font-style: italic;
 }
 .description{
-	color: black;
-	font-style: italic;
-	font-weight: bold;
-	font-family: cursive !important;
-	font-size: 1rem !important;
+	color: gold;
+    font-family: cursive !important;
+    font-size: 1.2rem !important;
 }
 
 
