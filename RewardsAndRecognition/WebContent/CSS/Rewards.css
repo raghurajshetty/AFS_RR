@@ -338,3 +338,9 @@ span:focus{
     display: inline-block;
     color:white;
 }
+
+
+.sapMListHdr{
+	color: white !important;
+    text-shadow: 0 0 0 !important;
+}
