@@ -18,6 +18,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/i069225/Documents/apache-tomcat-7.0.57/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/I069225/Documents/apache-tomcat-7.0.57/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

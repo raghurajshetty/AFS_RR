@@ -24,7 +24,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 * @memberOf rewards.Rewards
 */
 	onAfterRendering: function() {
-		
+		comingFromDel = false;
 		sap.ui.getCore().byId("idRewards--selCategory").setText(that._selCategory.CategoryName);
 		that._oDialog.open();
 		jQuery.sap.delayedCall(2000,this,function(){
@@ -273,6 +273,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 	},
 	
 	savetoSubmit:function(oEvent){
+		if(!comingFromDel){
 		 var bPath = oEvent.getSource().getBindingContext().sPath;
 		 jQuery.sap.require("sap.m.MessageBox");
 		 sap.m.MessageBox.confirm("Do you want to submit your nominations?",{
@@ -287,7 +288,8 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 				}
 			}
 		});
-		
+	  }
+		comingFromDel = false;
 	},
 	
 	clearContent:function(oEvent){
@@ -413,6 +415,7 @@ sap.ui.controller("rewardsandrecognition.Rewards", {
 	},
 	
 	savNomDel:function(oEvent){
+		comingFromDel = true;
 		that._oDialog.open();
 		var oModel = new sap.ui.model.odata.ODataModel("proxy/https/ldciey8.wdf.sap.corp:44320/sap/opu/odata/SAP/ZREWARDSANDRECOGNITION_SRV/",{
 			json:true

@@ -52,10 +52,19 @@ sap.ui.controller("rewardsandrecognition.welcomePage", {
 			success:function(oData){
 				that._oUser = oData;
 				that._oDialog.close();
-				var oShell = sap.ui.getCore().byId("shellContainer");
-				oShell.removeAllContent();
-				var categoriesView = sap.ui.getCore().byId("idCategories");
-				oShell.addContent(categoriesView);
+				if(that._oUser.d.Username == "UNAUTH"){
+					jQuery.sap.require("sap.m.MessageBox");
+					sap.m.MessageBox.alert("No authorizations to login!!",{
+					 	title:"Authorization Issue",
+					});
+				}else{
+					var oShell = sap.ui.getCore().byId("shellContainer");
+					oShell.removeAllContent();
+					var categoriesView = sap.ui.getCore().byId("idCategories");
+//					var dashboardView = sap.ui.getCore().byId("idDashboard");
+					oShell.addContent(categoriesView);
+				}
+
 			},
 			error:function(errLog){
 				console.log(errLog);

@@ -344,3 +344,39 @@ span:focus{
 	color: white !important;
     text-shadow: 0 0 0 !important;
 }
+
+
+/* #idRewards--savList-listUl > li{
+	height: 3rem;
+    padding: 0 1rem 0 1rem;
+}
+
+#idRewards--savList-listUl > li > div > div > div:nth-child(1) > label{
+	font-size: 1.125rem;
+    color: black;
+}
+
+#idRewards--savList-listUl > li > div > div > div:nth-child(2){
+	position: absolute;
+    right: 5rem;
+}
+
+#idRewards--savList-listUl > li > div > div > div:nth-child(3){
+	position: absolute;
+    right: 3rem;
+    height: 1.125rem;
+}
+
+#idRewards--savList-listUl > li > div > div > div:nth-child(3) > span{
+	font-size: 1.125rem;
+}
+
+#idRewards--savList-listUl > li > div > div > div:nth-child(4){
+	position: absolute;
+    right: 1rem;
+    height: 1.125rem;
+}
+
+#idRewards--savList-listUl > li > div > div > div:nth-child(4) > span{
+	font-size: 1.125rem;
+} */

@@ -37,3 +37,126 @@ canvas{
     color: white;
     box-shadow: 27px 21px 25px black;
 } */
+
+
+.description1{
+     color: black;
+      
+      
+      font-size: 1rem !important; 
+      overflow: auto;
+      width: 96%;
+      height: 500px;
+      border:     3px solid brown; 
+      
+      /* width: 15%;
+      wrapping: true;
+      scrollable: true;
+      growing: true;
+      height: 20%; */
+      
+      
+}
+.sapUiHLayoutChildWrapper{
+      
+}
+
+.hdr text {
+      text-align: center;
+}
+
+.sapUiVltCell .sapuiVltCell{
+      text-align: center;
+
+}
+
+
+.center{
+    /* text-align: center;
+    margin-left: 789px; */
+    color: black;
+    font-size: 2rem !important;
+    font-weight: bold;
+    /* font-style: oblique; */
+}
+
+.uColumnGraph{
+	width:30%;
+}
+
+.sapMPanelContent{
+	width:100% !important;
+	padding:0 !important;
+}
+
+
+.sapMPanelContent > div {
+	width:100%;
+}
+
+.sapMPanelContent > div > div{
+	width:100%;
+}
+
+.sapMPanelContent > div > div:first-child{
+	text-align:center;
+} 
+
+/* Upper Deck */
+.sapMPanelContent > div > div:nth-child(3) > div{
+	width:100%;
+}
+
+.sapMPanelContent > div > div:nth-child(3) > div > div:first-child{
+	width:20%;
+}
+
+.sapMPanelContent > div > div:nth-child(3) > div > div:nth-child(2){
+	width:30%;
+}
+
+.sapMPanelContent > div > div:nth-child(3) > div > div:nth-child(3){
+	width:30%;
+}
+
+.sapMPanelContent > div > div:nth-child(3) > div > div:last-child{
+	width:20%;
+}
+
+.sapMPanelContent > div > div:nth-child(3) > div > div:nth-child(2) > div{
+	width:98% !important;
+}
+
+.sapMPanelContent > div > div:nth-child(3) > div > div:nth-child(3) > div{
+	width:98% !important;
+}
+
+
+/* Lower Deck */
+.sapMPanelContent > div > div:nth-child(4) > div{
+	width:100%;
+}
+
+.sapMPanelContent > div > div:nth-child(4) > div > div:first-child{
+	width:20%;
+}
+
+.sapMPanelContent > div > div:nth-child(4) > div > div:nth-child(2){
+	width:30%;
+}
+
+.sapMPanelContent > div > div:nth-child(4) > div > div:nth-child(3){
+	width:30%;
+}
+
+.sapMPanelContent > div > div:nth-child(4) > div > div:last-child{
+	width:20%;
+}
+
+.sapMPanelContent > div > div:nth-child(4) > div > div:nth-child(2) > div{
+	width:98% !important;
+}
+
+.sapMPanelContent > div > div:nth-child(4) > div > div:nth-child(3) > div{
+	width:98% !important;
+}

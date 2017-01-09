@@ -1,4 +1,4 @@
-<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+<!-- <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
 			controllerName="rewardsandrecognition.dashboardPage" xmlns:html="http://www.w3.org/1999/xhtml"
 			xmlns:layout="sap.ui.layout" xmlns:m="sap.m">
 			<layout:HorizontalLayout>
@@ -24,9 +24,9 @@
 						press="">
 					</Button>
 				</layout:VerticalLayout>
-<!-- 	 			 <html:canvas
+	 			 <html:canvas
 						id="canvasSheet">
-				</html:canvas>  -->
+				</html:canvas> 
 				<html:div
 					id="dropBox">
 				</html:div>
@@ -49,3 +49,67 @@
 				</m:pages>
 			</m:Carousel>
 </core:View>
+ -->
+ 
+ 
+ <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+                  controllerName="rewardsandrecognition.dashboardPage" xmlns:html="http://www.w3.org/1999/xhtml"
+                  xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.data="sap.viz.ui5.data"
+                  xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">  
+  
+                                                                        
+
+
+		 <Image src = "images/dashboard/ban.png" 
+		            width="100%" alt="" class = "" >
+		</Image>
+		    
+                                  				<m:Carousel loop="true"  pages="{/d/results}" id="idCarousel" pageChanged="carouselchange">   
+                                                     <m:Panel> 
+                                                         <layout:VerticalLayout id="pDeck"> 
+                                                             <layout:content>
+                                                             	<m:Text text="{CategoryName}" class="center" ></m:Text>
+                                                                <layout:HorizontalLayout  >     
+																	
+                                                                </layout:HorizontalLayout>      
+                                                                <layout:HorizontalLayout id="upperDeck">   
+                                                                   <layout:content>
+                                                                  		<FormattedTextView id="idtextarea" class="description1" wrapping = "true" scrollable="true">
+                        												</FormattedTextView>
+                                                                        <ui5.controls.VizFrame  height="500px"  xmlns="sap.viz" id="idcolumn"  selectData = "test" 
+                                                                        						deselectData = "test2" class="uColumnGraph" renderComplete="dialogEnd">
+                                                						</ui5.controls.VizFrame>
+                                           								<ui5.controls.VizFrame   height="500px" xmlns="sap.viz" id="idcolumn2" selectData = "test1" 
+                                           														deselectData = "test3" class="uColumnGraph" renderComplete="dialogEnd">
+                                                						</ui5.controls.VizFrame>    
+                                                                		<FormattedTextView id="idtextarea1" wrapping = "true" scrollable="true" class="description1" >
+                                                                		</FormattedTextView>
+                                       								</layout:content>
+                                                                </layout:HorizontalLayout>     
+                                                                <layout:HorizontalLayout id="lowerDeck">  
+                                                                   <layout:content>  
+                                                                       <FormattedTextView id="idtextarea2" class="description1" wrapping = "true" scrollable="true" >
+                                                                       </FormattedTextView>                 
+                													   <ui5.controls.VizFrame  width="400px" height="500px" xmlns="sap.viz" id="idcolumn3"  
+                													   						   selectData = "test4" deselectData = "test5">
+                                                 					   </ui5.controls.VizFrame>
+                                                            		   <ui5.controls.VizFrame  width="400px" height="500px" xmlns="sap.viz" id="idcolumn4" 
+                                                            		   						   selectData = "test6" deselectData = "test7">
+                                                					   </ui5.controls.VizFrame>                                         
+                                                                       <FormattedTextView class="description1" id="idtextarea3" wrapping = "true" scrollable="true" >
+                                                                       </FormattedTextView>  
+                                      								</layout:content>
+                                                                </layout:HorizontalLayout>    
+                                                             </layout:content>          
+                                                        </layout:VerticalLayout>      
+                                                        <layout:VerticalLayout>
+															<layout:dependents>
+																<core:Fragment fragmentName="rewardsandrecognition.busyDialog" type="XML">
+																</core:Fragment>
+															</layout:dependents>
+														</layout:VerticalLayout>  
+                                                     </m:Panel>   
+  												</m:Carousel>
+
+</core:View>
+ 
